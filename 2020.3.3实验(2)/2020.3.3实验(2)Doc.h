@@ -1,16 +1,16 @@
 ﻿
-// MFCApplication1Doc.h: CMFCApplication1Doc 类的接口
+// 2020.3.3实验(2)Doc.h: CMy202033实验2Doc 类的接口
 //
 
 
 #pragma once
 
 
-class CMFCApplication1Doc : public CDocument
+class CMy202033实验2Doc : public CDocument
 {
 protected: // 仅从序列化创建
-	CMFCApplication1Doc() noexcept;
-	DECLARE_DYNCREATE(CMFCApplication1Doc)
+	CMy202033实验2Doc() noexcept;
+	DECLARE_DYNCREATE(CMy202033实验2Doc)
 
 // 特性
 public:
@@ -29,7 +29,7 @@ public:
 
 // 实现
 public:
-	virtual ~CMFCApplication1Doc();
+	virtual ~CMy202033实验2Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

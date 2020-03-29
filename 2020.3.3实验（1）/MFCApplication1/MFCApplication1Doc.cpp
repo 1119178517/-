@@ -31,6 +31,10 @@ END_MESSAGE_MAP()
 CMFCApplication1Doc::CMFCApplication1Doc() noexcept
 {
 	// TODO: 在此添加一次性构造代码
+	S=_T("我是钟国誉");
+	int A = 888;
+	SS.Format(_T("%d"),A);
+	
 
 }
 

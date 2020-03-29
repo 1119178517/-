@@ -55,12 +55,9 @@ void CMFCApplication1View::OnDraw(CDC* pDC)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
-	CString S = _T("我是钟国誉");
-	CString SS;
-	int A = 888;
-	SS.Format(_T("%d"), A);
-	pDC->TextOutW(200, 200, S);
-	pDC->TextOutW(200, 300, SS);
+	
+	pDC->TextOutW(200, 200, pDoc->S);
+	pDC->TextOutW(200, 300, pDoc->SS);
 
 }
 
