@@ -1,19 +1,19 @@
 ﻿
-// MFCApplication2View.h: CMFCApplication2View 类的接口
+// MFC2View.h: CMFC2View 类的接口
 //
 
 #pragma once
 
 
-class CMFCApplication2View : public CView
+class CMFC2View : public CView
 {
 protected: // 仅从序列化创建
-	CMFCApplication2View();
-	DECLARE_DYNCREATE(CMFCApplication2View)
+	CMFC2View() noexcept;
+	DECLARE_DYNCREATE(CMFC2View)
 
 // 特性
 public:
-	CMFCApplication2Doc* GetDocument() const;
+	CMFC2Doc* GetDocument() const;
 
 // 操作
 public:
@@ -26,7 +26,7 @@ protected:
 
 // 实现
 public:
-	virtual ~CMFCApplication2View();
+	virtual ~CMFC2View();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -39,8 +39,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 };
 
-#ifndef _DEBUG  // MFCApplication2View.cpp 中的调试版本
-inline CMFCApplication2Doc* CMFCApplication2View::GetDocument() const
-   { return reinterpret_cast<CMFCApplication2Doc*>(m_pDocument); }
+#ifndef _DEBUG  // MFC2View.cpp 中的调试版本
+inline CMFC2Doc* CMFC2View::GetDocument() const
+   { return reinterpret_cast<CMFC2Doc*>(m_pDocument); }
 #endif
 

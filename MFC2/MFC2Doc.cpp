@@ -1,5 +1,5 @@
 ﻿
-// MFCApplication2Doc.cpp: CMFCApplication2Doc 类的实现
+// MFC2Doc.cpp: CMFC2Doc 类的实现
 //
 
 #include "pch.h"
@@ -7,10 +7,10 @@
 // SHARED_HANDLERS 可以在实现预览、缩略图和搜索筛选器句柄的
 // ATL 项目中进行定义，并允许与该项目共享文档代码。
 #ifndef SHARED_HANDLERS
-#include "MFCApplication2.h"
+#include "MFC2.h"
 #endif
 
-#include "MFCApplication2Doc.h"
+#include "MFC2Doc.h"
 
 #include <propkey.h>
 
@@ -18,27 +18,27 @@
 #define new DEBUG_NEW
 #endif
 
-// CMFCApplication2Doc
+// CMFC2Doc
 
-IMPLEMENT_DYNCREATE(CMFCApplication2Doc, CDocument)
+IMPLEMENT_DYNCREATE(CMFC2Doc, CDocument)
 
-BEGIN_MESSAGE_MAP(CMFCApplication2Doc, CDocument)
+BEGIN_MESSAGE_MAP(CMFC2Doc, CDocument)
 END_MESSAGE_MAP()
 
 
-// CMFCApplication2Doc 构造/析构
+// CMFC2Doc 构造/析构
 
-CMFCApplication2Doc::CMFCApplication2Doc() 
+CMFC2Doc::CMFC2Doc() noexcept
 {
 	// TODO: 在此添加一次性构造代码
 	a = 123;
 }
 
-CMFCApplication2Doc::~CMFCApplication2Doc()
+CMFC2Doc::~CMFC2Doc()
 {
 }
 
-BOOL CMFCApplication2Doc::OnNewDocument()
+BOOL CMFC2Doc::OnNewDocument()
 {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
@@ -52,9 +52,9 @@ BOOL CMFCApplication2Doc::OnNewDocument()
 
 
 
-// CMFCApplication2Doc 序列化
+// CMFC2Doc 序列化
 
-void CMFCApplication2Doc::Serialize(CArchive& ar)
+void CMFC2Doc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
@@ -69,7 +69,7 @@ void CMFCApplication2Doc::Serialize(CArchive& ar)
 #ifdef SHARED_HANDLERS
 
 // 缩略图的支持
-void CMFCApplication2Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
+void CMFC2Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 {
 	// 修改此代码以绘制文档数据
 	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
@@ -90,7 +90,7 @@ void CMFCApplication2Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 }
 
 // 搜索处理程序的支持
-void CMFCApplication2Doc::InitializeSearchContent()
+void CMFC2Doc::InitializeSearchContent()
 {
 	CString strSearchContent;
 	// 从文档数据设置搜索内容。
@@ -100,7 +100,7 @@ void CMFCApplication2Doc::InitializeSearchContent()
 	SetSearchContent(strSearchContent);
 }
 
-void CMFCApplication2Doc::SetSearchContent(const CString& value)
+void CMFC2Doc::SetSearchContent(const CString& value)
 {
 	if (value.IsEmpty())
 	{
@@ -120,19 +120,19 @@ void CMFCApplication2Doc::SetSearchContent(const CString& value)
 
 #endif // SHARED_HANDLERS
 
-// CMFCApplication2Doc 诊断
+// CMFC2Doc 诊断
 
 #ifdef _DEBUG
-void CMFCApplication2Doc::AssertValid() const
+void CMFC2Doc::AssertValid() const
 {
 	CDocument::AssertValid();
 }
 
-void CMFCApplication2Doc::Dump(CDumpContext& dc) const
+void CMFC2Doc::Dump(CDumpContext& dc) const
 {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG
 
 
-// CMFCApplication2Doc 命令
+// CMFC2Doc 命令

@@ -1,5 +1,5 @@
 ﻿
-// MFCApplication2.h: MFCApplication2 应用程序的主头文件
+// MFC2.h: MFC2 应用程序的主头文件
 //
 #pragma once
 
@@ -10,14 +10,14 @@
 #include "resource.h"       // 主符号
 
 
-// CMFCApplication2App:
-// 有关此类的实现，请参阅 MFCApplication2.cpp
+// CMFC2App:
+// 有关此类的实现，请参阅 MFC2.cpp
 //
 
-class CMFCApplication2App : public CWinApp
+class CMFC2App : public CWinApp
 {
 public:
-	CMFCApplication2App() noexcept;
+	CMFC2App() noexcept;
 
 
 // 重写
@@ -30,4 +30,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CMFCApplication2App theApp;
+extern CMFC2App theApp;

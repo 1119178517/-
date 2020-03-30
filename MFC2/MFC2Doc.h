@@ -1,16 +1,16 @@
 ﻿
-// MFCApplication2Doc.h: CMFCApplication2Doc 类的接口
+// MFC2Doc.h: CMFC2Doc 类的接口
 //
 
 
 #pragma once
 
 
-class CMFCApplication2Doc : public CDocument
+class CMFC2Doc : public CDocument
 {
 protected: // 仅从序列化创建
-	CMFCApplication2Doc();
-	DECLARE_DYNCREATE(CMFCApplication2Doc)
+	CMFC2Doc() noexcept;
+	DECLARE_DYNCREATE(CMFC2Doc)
 
 // 特性
 public:
@@ -29,7 +29,7 @@ public:
 
 // 实现
 public:
-	virtual ~CMFCApplication2Doc();
+	virtual ~CMFC2Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

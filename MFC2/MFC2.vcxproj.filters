@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MFCApplication2.h">
+    <ClInclude Include="MFC2.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -27,10 +27,10 @@
     <ClInclude Include="MainFrm.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="MFCApplication2Doc.h">
+    <ClInclude Include="MFC2Doc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="MFCApplication2View.h">
+    <ClInclude Include="MFC2View.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
@@ -41,16 +41,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MFCApplication2.cpp">
+    <ClCompile Include="MFC2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MainFrm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MFCApplication2Doc.cpp">
+    <ClCompile Include="MFC2Doc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MFCApplication2View.cpp">
+    <ClCompile Include="MFC2View.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
@@ -58,20 +58,21 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MFCApplication2.rc">
+    <ResourceCompile Include="MFC2.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\MFCApplication2.rc2">
+    <None Include="res\MFC2.rc2">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\MFCApplication2Doc.ico">
+    <Image Include="res\MFC2Doc.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="res\MFCApplication2.ico">
+    <Image Include="res\MFC2.ico">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">

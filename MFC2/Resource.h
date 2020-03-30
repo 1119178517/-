@@ -1,11 +1,11 @@
 ﻿//{{NO_DEPENDENCIES}}
 // 生成的 Microsoft Visual C++ 包含文件。
-// 由 MFCApplication2.rc 使用
+// 由 MFC2.rc 使用
 //
 #define IDD_ABOUTBOX				100
 #define IDP_OLE_INIT_FAILED			100
 #define IDR_MAINFRAME				128
-#define IDR_MFCApplication2TYPE				130
+#define IDR_MFC2TYPE				130
 
 // 新对象的下一组默认值
 //
