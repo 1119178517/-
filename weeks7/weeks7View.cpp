@@ -12,11 +12,12 @@
 
 #include "weeks7Doc.h"
 #include "weeks7View.h"
-#include"MyDlg0.h"
+
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
+
 
 
 // Cweeks7View
@@ -25,6 +26,8 @@ IMPLEMENT_DYNCREATE(Cweeks7View, CView)
 
 BEGIN_MESSAGE_MAP(Cweeks7View, CView)
 	ON_COMMAND(ID_32771, &Cweeks7View::On32771)
+	ON_WM_LBUTTONDOWN()
+	ON_COMMAND(ID_SHOWHIDE, &Cweeks7View::OnShowhide)
 END_MESSAGE_MAP()
 
 // Cweeks7View 构造/析构
@@ -32,6 +35,8 @@ END_MESSAGE_MAP()
 Cweeks7View::Cweeks7View() noexcept
 {
 	// TODO: 在此处添加构造代码
+	show_hide = 1;
+	pD = NULL;
 
 }
 
@@ -100,5 +105,29 @@ void Cweeks7View::On32771()
 		CRect re(X-R,Y-R,X+R,Y+R);
 		GetDC()->Ellipse(re);
 	}
+
+}
+
+
+void Cweeks7View::OnLButtonDown(UINT nFlags, CPoint point)
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+
+	pD=new MyDlg0;
+	pD->Create(IDD_DIALOG1);
+	pD->ShowWindow(1);
+
+	CView::OnLButtonDown(nFlags, point);
+}
+
+
+void Cweeks7View::OnShowhide()
+{
+	// TODO: 在此添加命令处理程序代码
+	if (show_hide == 1)
+		show_hide = 0;
+	else
+		show_hide = 1;
+	pD->ShowWindow(show_hide);
 
 }

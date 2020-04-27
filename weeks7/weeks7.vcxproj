@@ -214,6 +214,7 @@
     <ResourceCompile Include="weeks7.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="res\weeks7.rc2" />
   </ItemGroup>
   <ItemGroup>
